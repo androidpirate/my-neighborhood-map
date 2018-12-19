@@ -40,7 +40,7 @@ class Map extends Component {
       this.props.openInfoWindow(window.infoWindowMarker, window.infoWindowVenue)
     }
     return (
-      <div id="map"></div>
+      <div id="map" role="application" tabIndex="-1"></div>
     )
   }
 }

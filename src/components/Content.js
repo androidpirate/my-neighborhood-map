@@ -39,6 +39,10 @@ class Content extends Component {
       this.setState({
         filteredVenues: this.filterLocations(query, this.state.venues)
       })
+    } else {
+      this.setState({
+        filteredVenues: this.state.venues
+      })
     }
   }
 
@@ -112,7 +116,9 @@ class Content extends Component {
   render() {
     return (
       <div id="content-container">
-        <div id="hamburger-icon" onClick={() => this.collapseSideBar()}>
+        <div id="hamburger-icon" role="button" tabIndex="0"
+            onClick={() => this.collapseSideBar()}
+            onKeyPress={() => this.collapseSideBar()}>
           <div className="bar1"></div>
           <div className="bar2"></div>
           <div className="bar3"></div>
@@ -120,6 +126,7 @@ class Content extends Component {
         <div id="feature-container">
           {this.state.sidebarOpen ?
           <List id="list"
+              query={this.state.query}
               filteredVenues={this.state.filteredVenues}
               handleInput={this.handleInput}
               handleClick={this.handleClick}/> : null}

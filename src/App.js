@@ -36,6 +36,11 @@ class App extends Component {
       center: { lat: 42.2808, lng: -83.7330 },
       zoom: 14
     })
+    window.google.maps.event.addListener(map, "tilesloaded", function(){
+      [].slice.apply(document.querySelectorAll('#map a')).forEach(function(item) {
+        item.removeAttribute('tabindex')
+      })
+    })
     window.map = map
     let infowindow = new window.google.maps.InfoWindow()
     window.infowindow = infowindow
@@ -44,7 +49,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" role="main">
         <Header/>
         <Content/>
       </div>
