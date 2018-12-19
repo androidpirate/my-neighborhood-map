@@ -4,10 +4,199 @@
   width: 100vw;
 }
 
+#map-header {
+  height: 3%;
+  margin: 0;
+  padding: 1rem;
+  background-color: #99bbff;
+}
+
+#header-text {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contains Hamburger Icon and Content */
+#content-container {
+  display:flex;
+  flex-direction: column;
+  height: 90%;
+  background-color: #ff99bb;
+}
+
+/* Hamburger Icon */
+#hamburger-icon {
+  width: 100%;
+  height: 40px;
+  margin: 10px 20px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Contains Sidebar and Map */
+#feature-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: #ff99bb;
+}
+
 #map {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 98%;
   padding: 20px;
+}
+
+#list-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ff99bb;
+}
+
+#list-header {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#filter-input {
+  width: 90%;
+  display: block;
+  margin: 0.5rem;
+  font-size: 20px;
+}
+
+#venue-list {
+  height: 75%;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  overflow-y: scroll;
+}
+
+#venue-list ul {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#venue-list li {
+  list-style: none;
+}
+
+#venue-list-item {
+  width: 100%;
+  font-size: 16px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background-color: #d6d6c2;
+}
+
+.sidebar-close {
+  display: none;
+}
+
+/* Media Queries */
+/* iPad to iPad Pro */
+@media screen and (max-width: 1024px) {
+
+  #content-container {
+    height: 100%;
+  }
+
+  #map-header {
+    height: 3%;
+  }
+
+  #header-text {
+    font-size: 26px;
+  }
+
+  #map {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 92%;
+    padding: 10px;
+  }
+
+  #list-container {
+    width: 45%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  #list-header {
+    font-size: 20px;
+  }
+
+  #filter-input {
+    font-size: 18px;
+  }
+
+  #venue-list-item {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Smaller than iPad */
+@media screen and (max-width: 767px) {
+
+  #content-container {
+    height: 100%;
+  }
+
+  #map-header {
+    height: 3%;
+  }
+
+  #header-text {
+    font-size: 20px;
+  }
+
+  #map {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 92%;
+    padding: 10px;
+  }
+
+  #list-container {
+    width: 300%;
+    height: 100%;
+    padding: 1px;
+  }
+
+  #list-header {
+    font-size: 20px;
+  }
+
+  #filter-input {
+    font-size: 18px;
+  }
+
+  #venue-list-item {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
 }
